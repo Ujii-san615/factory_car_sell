@@ -2,10 +2,10 @@
         <div class="footer">
             <!-- topup -->
             <div id="page-top">
-                <a href="#"><img src="/assets/images/top_up.png" alt=""></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/top_up.png" alt=""></a>
             </div>
             <!-- footer img -->
-            <img src= ".assets/images/footer.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer.png" alt="">
             <div class=copylight>
                 <p class="copy">Copyright © クッピー乳児園. All Rights Reserved.</p>
             </div>

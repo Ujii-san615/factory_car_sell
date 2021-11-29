@@ -78,4 +78,26 @@
         load_theme_textdomain( 'wpbeg', get_template_directory() . '/languages' );
         }
     add_action( 'after_setup_theme', 'wpbeg_theme_setup' );
+
+    /*navmenu */
+    function register_my_menus() { 
+        register_nav_menus(
+            array(
+            'headernav' => 'ヘッダーナビ',
+            'sidenav' => 'サイドナビ',
+            'footernav_l' => 'フッターナビ(左)',
+            'footerna_r' => 'フッターナビ(右)'
+            )
+        );
+        }
+        add_action( 'after_setup_theme', 'register_my_menus' );
+
+    
+    /*main js 読み込み */
+    function twpp_enqueue_scripts() {
+        wp_enqueue_script( 
+        'main-script', 
+        get_template_directory_uri() . '/js/main.js' );
+    }
+    add_action( 'wp_enqueue_scripts', 'twpp_enqueue_scripts' );
 ?>

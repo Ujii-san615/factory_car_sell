@@ -52,21 +52,21 @@
         <section>
             <div class="section" id=section3>
                 <div class="section_line">
-                    <img src="/assets/images/line_flower.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/line_flower.png" alt="">
                 </div>
                 <h1>小規模保育園とは？</h1>
                 <div class="section3_box">
                     <div class="section3_square" id="square1">
-                        <img src="/assets/images/icon1.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon1.png" alt="">
                         <p class="square">０〜３歳未満対象</p>
                     </div>
                     <div class="section3_square" id="square2">
-                        <img src="/assets/images/icon2.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon2.png" alt="">
                         <p class="square">定員数19人以下の<br>
                             小規模保育</p>
                     </div>
                     <div class="section3_square" id="square3">
-                        <img src="/assets/images/icon3.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon3.png" alt="">
                         <p class="square">２歳児クラス卒園後、<br>
                             認可保育園へ進級</p>
                     </div>
@@ -88,7 +88,7 @@
 
         </section>
         <div class="section_line">
-            <img src="/assets/images/line_flower.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/line_flower.png" alt="">
         </div>
         <section>
             <div id="section4">

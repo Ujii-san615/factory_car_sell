@@ -10,10 +10,10 @@
             <div class="schedule" id=section1>
                 <!-- <h1>一日の保育の流れ</h1> -->
                 <div class="day_schedule sp">
-                    <img src="/assets/images/schedule_sp.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/schedule_sp.png" alt="">
                 </div>
                 <div class="day_schedule pc">
-                    <img src="/assets/images/schedule_pc.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/schedule_pc.png" alt="">
                 </div>
             </div>
         </section>
@@ -21,9 +21,9 @@
         <section>
             <div class="schedule" id=section2>
                 <h1><pre>          年間行事           </pre></h1>
-                <div class="schedule_wrap">
+                <div class="schedule_wrp">
                     <div class="schedule_box">
-                        <img src="/assets/images/calender/yearly4.jpeg" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/calender/yearly4.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>入園式</li>

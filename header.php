@@ -17,14 +17,7 @@
     <div class="pc_nav_menu pc">
         <nav id="pc-nav">
             <div id="pc-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
-                <ul>
-                    <li><a href=".index.php">TOPページ</a></li>
-                    <li><a href="info.php">お知らせ</a></li>
-                    <li><a href=".service/index.php">保育内容</a></li>
-                    <li><a href=".introduce/index.php">園の紹介</a></li>
-                    <li><a href=".schedule/index.php">園の生活</a></li>
-                    <li><a href=".album/index.php">アルバム</a></li>
-                </ul>
+                <?php wp_nav_menu( array('theme_location'  => 'headernav',)); ?>
             </div>
         </nav>
     </div>
@@ -33,22 +26,24 @@
 <div class="openbtn1 sp"><span></span><span></span><span></span></div>
     <nav id="g-nav">
         <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
-            <ul>
-                <<li><a href="/index.php">TOPページ</a></li>
+            <!-- <ul>
+                <li><a href="/index.php">TOPページ</a></li>
                     <li><a href="/info/index.php">お知らせ</a></li>
                     <li><a href="/service/index.php">保育内容</a></li>
                     <li><a href="/introduce/index.php">園の紹介</a></li>
                     <li><a href="/schedule/index.php">園の生活</a></li>
                     <li><a href="/album/index.php">アルバム</a></li>
-            </ul>
+            </ul> -->
+            <?php wp_nav_menu( array('theme_location'  => 'headernav',)); ?>
         </div>
     </nav>
 <div class="circle-bg"></div>
 <!-- navmenu  sp end-->
     <div class="header_back">
-        <img src="/assets/images/header_img.png" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/header_img.png" alt="">
     </div>
     <div class="header_logo">
         <img src="/assets/images/logo.png" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" alt="">
     </div>
 </header>
