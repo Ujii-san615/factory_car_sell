@@ -223,4 +223,6 @@
     
     add_shortcode('myphp', 'Include_my_php');
     //ここまで
+
+    
 ?>

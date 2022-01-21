@@ -257,12 +257,12 @@ main{
         background-color: rgb(255, 240, 227);
         border-radius: 10px;
         border:solid 1px black;
-        width: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
         padding: 5px;
-        margin-bottom: 10px;
+        margin: 10px;
+        width: 95%;
         .h2_box {
             position: relative;
             display: inline-block;
@@ -328,10 +328,11 @@ main{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    img{
-        padding-top: 0px;
-        width: 90%;
-        max-width: 600px;
+    .slider{
+        li img{
+            padding-top: 0px;
+            width: 90%;
+        }
     }
 }
 
@@ -340,7 +341,8 @@ main{
 @media screen and (min-width: 767px) {
     main{
         width: 100%;
-        section{
+        section {
+            max-width: 600px;
             #section1{
                 margin: 0 auto;
             }
@@ -348,6 +350,7 @@ main{
                 min-width: 40%;
                 max-width: 60%;
                 margin: 40px auto;
+                width: 100vw;
             }
             .section3_box{
                 .square{
@@ -864,19 +867,17 @@ section{
     img{
         width: 100%;
     }
-    .we_box{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        padding-top: 20px;
-
-        img{
-            margin: 0 auto;
-            width: 90%;
-            padding: 10px;
-        }
+}
+.we_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    img{
+        width: 80vw;
     }
 }
 #section2,#section3{
@@ -903,96 +904,92 @@ section{
 /* ----service  レスポンシブ    保育内容 -------------- */
 
 @media screen and (min-width: 767px) {
-    .service{
-        width: 700px;
         .we_box{
+            width: 100vw;
             img{
-                max-width: 500px;
+                max-width: 50vw;
             }
         }
-
-    }
 }
 /* -------------------------------------- */
 /*    service  end    保育内容              */
 /* -------------------------------------- */
 
-/*----------------------*/
-/*   info はココから   */
-/*----------------------*/
-.info {
-    max-width: 1152px;
-    margin: 0 auto;
-    .info-h1 {
-    font-size: 2em;
-    padding: 3rem;
-    text-transform: capitalize;
-    text-align: center
-    }
-}
-.info-ul {
-    @include flex_box(space-around);
-    flex-wrap: wrap;
-    margin-bottom: 8rem;
-    .info-li {
-        // max-width: 320px;
-        height: 27rem; /*0617*/
-        margin-bottom: 2rem;
-        .post__meta__item,.info-h2{
-        color: $black;
-        // padding: .9rem 0 0; /*0617*/
-        }
-    .info-img {
-        width: 100%;
-        }
-        .post__meta__date {
-        display: block;
-        padding: .5rem 0 0 0;
-        }
-        .info-h2 {
-        max-width: 320px;
-        height: 6.5rem;
-        padding: 1.2rem 0;
 
+/* -------------------------------------- */
+/*    introduce  園紹介              */
+/* -------------------------------------- */
+
+@media screen and (min-width: 767px) {
+    .section_slider{ /*pc viww*/
+        .slider_wrap{
+            display: flex;
+            justify-content: center;
+            max-width: 500px;
+            .slider{
+                margin: 0 auto;
+                max-width: 60vw;
+                width: 80vw;
+                .slick-track{
+                    li{
+                        img{
+                            max-width: 40vw;
+                            margin: 0 5vw 0 8vw;
+                        }
+                    }
+                }
+            }
         }
     }
-    .time-p {
-        padding-left: .5rem;
-    }
-    .info-p {
-        width: 100px;
-        color: black;
-        margin-left: 14rem; /*0617*/
-        // padding-right: 1.2rem; /*0617*/
-        // padding: 0 0 0 14rem; /*0617*/
-        display: inline;
-        position: relative;
-        &::before {
-        content: '';
-        position: absolute;
-        right: -4%; /*0617*/
-        bottom: -10px;
-        display: inline-block;
-        width: 30px;
-        height: 2px;
-        transform: translate(-50%);
-        background-color: black;
-        }
-        
-    }
-}
-.info-p > .info-a {
-    color: black;
-}
-.info-p:hover::before {
-    width: 90%;
-    transform: translate(-8%);
-} 
-.info-li:hover {
-    box-shadow:3px 3px 5px 5px gray;
-    // border:1px solid #000;
 }
 
-/*-----------------------*/
-/*   section2はココで終わり  */
-/*----------------------*/
+
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    // border-top: 2px solid #666;/*矢印の色*/
+    // border-right: 2px solid #666;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+    z-index: 30;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: 3%;
+    // transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: 3%;
+    // transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
+    text-align:center;
+    margin:50px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+    margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
