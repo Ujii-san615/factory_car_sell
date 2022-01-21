@@ -9,7 +9,7 @@
         <div class="section" id=section1>
             <h1>私たちについて</h1>
             <div class="we_box">
-            <img src="[tmplurl]/images/slider2.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/slider2.jpg">
                 <p>クッピー乳児園は、27年3ヵ月、無認可で地域の子どもたちを保育してまいりました。<br>
                 そして、2017年8月に小規模保育事業所として引き続き、「クッピー乳児園開園」しております。<br>
                 経験豊富な保育士がよりよい環境づくりをし、家庭的で安心安全。<br>
@@ -129,13 +129,26 @@
             <h1>クラス紹介</h1>
             <div class="slider_wrap">
                 <ul class="slider">
-                    <li><img src="[tmplurl]/assets/images/stage1.png" alt=""></li>
-                    <li><img src="[tmplurl]/assets/images/stage2.png" alt=""></li>
-                    <li><img src="[tmplurl]/assets/images/stage3.png" alt=""></li>
+                    <li><img src="<?php echo get_template_directory_uri();?>/images/stage1.png" alt=""></li>
+                    <li><img src="<?php echo get_template_directory_uri();?>/images/stage2.png" alt=""></li>
+                    <li><img src="<?php echo get_template_directory_uri();?>/images/stage3.png" alt=""></li>
                 </ul>
             </div>
         <div>
     </section>
     </main>
+    <script type="text/javascript">
+        $('.slider').slick({
+            autoplay:true,
+            autoplaySpeed:5000,
+            dots:true,
+            centerMode: true,
+            centerPadding: '30px',
+            dots:true,
+            focusOnSelect:true,
+            prevArrow: '<<?php echo get_template_directory_uri();?>/iimages/left.png" class="slick-prev slick-arrow">',//矢印部分PreviewのHTMLを変更
+            nextArrow: '<?php echo get_template_directory_uri();?>/iimages/right.png" class="slick-next slick-arrow">',//矢印部分NextのHTMLを変更
+        });
+    </script>
 
 <?php get_footer(); ?> 

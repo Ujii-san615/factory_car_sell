@@ -122,10 +122,31 @@
     /*main js 読み込み */
     function twpp_enqueue_scripts() {
         wp_enqueue_script( 
-        'main-script', 
-        get_template_directory_uri() . '/js/main.js' );
+            'main-script', 
+            get_template_directory_uri() . '/assets/js/main.js' 
+        );
     }
+    
     add_action( 'wp_enqueue_scripts', 'twpp_enqueue_scripts' );
+
+    // function js_header(){
+    //     wp_enqueue_script( 
+    //             'slick.min.js', 
+    //             get_template_directory_uri() . '/assets/js/slick.min.js',
+    //             array( 'jquery', 'slick.min.js' ),
+    //             false,
+    //             true // ヘッダーなのでtrue
+    //     );
+    // }
+        
+    // add_action( 'wp_enqueue_scripts', 'twpp_enqueue_scripts' );
+
+    // function javascript() {
+    //     wp_enqueue_script( ‘jquery-js’, ‘https://code.jquery.com/jquery-3.5.1.min.js’, [], ”, true );
+    //     wp_enqueue_script( ‘script’, get_theme_file_uri(‘https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js’), [‘jquery-js’], ”, true );
+    //     }
+    // add_action( ‘wp_enqueue_scripts’, ‘javascript’);
+
 
     // create custom post type(お知らせ)
     function news_custom_post_type(){
@@ -224,5 +245,14 @@
     add_shortcode('myphp', 'Include_my_php');
     //ここまで
 
+    /* PHPの読み込み
+---------------------------------------------------------- */
+    function my_php_Include($params = array()) {
+    extract(shortcode_atts(array('file' => 'default'), $params));
+    ob_start();
+    include(STYLESHEETPATH . "/$file.php");
+    return ob_get_clean();
+    }
+    add_shortcode('call_php', 'my_php_Include');
     
 ?>
