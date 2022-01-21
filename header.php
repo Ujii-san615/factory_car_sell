@@ -7,6 +7,7 @@
 		<meta name="format-detection" content="telephone=no">
 		<meta name="description" content="WordPress theme development static data for beginners">
 		<meta name="keywords" content="WordPress, Theme, development">
+        <link rel="stylesheet" href="/assets/css/common.css">
 		<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
 		<?php wp_head(); ?>
     </head>

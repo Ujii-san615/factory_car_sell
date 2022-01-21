@@ -8,11 +8,11 @@
         <!-- content -->
         <section>
             <div class="service" id=section1>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kuppy_img.png" alt="">
+            <img src="[tmplurl]/assets/images/kuppy_img.png">
                 <h1>保育理念</h1>
                 <div class="we_box">
                     <p>子どもの幸せを一番に願い、<br>心身ともに豊かでたくましい子どもの育成を目指します。</p>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/heart_body.png" alt="">
+                    <img src="[tmplurl]/assets/images/heart_body.png">
                     <p>生きる上で大切な基本的生活習慣を、<br>保育生活を通して行い、楽しみながら育みます。</p>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 <div class="we_box">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hoiku.png" alt="">
+                    <img src="[tmplurl]/assets/images/hoiku.png">
                 </div>
             </div>
         </section>

@@ -1,7 +1,63 @@
-<?php get_header(); ?>
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/schedule.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Yomogi&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet"> -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <title>園の生活</title>
+</head>
+<body>
+    <header class="header">
+        <header class="header">
+            <!-- navmenu  pc-->
+                <div class="pc_nav_menu pc">
+                    <nav id="pc-nav">
+                        <div id="pc-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                            <ul>
+                                <li><a href="/index.html">TOPページ</a></li>  
+                                <li><a href="/pages/information.html">お知らせ</a></li>  
+                                <li><a href="/pages/service.html">保育内容</a></li>  
+                                <li><a href="/pages/introduce.html">園の紹介</a></li>  
+                                <li><a href="/pages/schedule.html">園の生活</a></li>
+                                <li><a href="/pages/album.html">アルバム</a></li>  
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            <!-- navmenu  pc end-->
+        <div class="header_back">
+            <img src="/assets/images/header_img.png" alt="">
+        </div>
+        <div class="header_logo">
+            <img src="/assets/images/logo.png" alt="">
+        </div>
+    </header>
+    <!-- navmenu  sp-->
+    <div class="openbtn1 sp"><span></span><span></span><span></span></div>
+        <nav id="g-nav">
+            <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                <ul>
+                    <li><a href="/index.html">TOPページ</a></li>  
+                    <li><a href="/pages/information.html">お知らせ</a></li>  
+                    <li><a href="/pages/service.html">保育内容</a></li>  
+                    <li><a href="/pages/introduce.html">園の紹介</a></li>  
+                    <li><a href="/pages/schedule.html">園の生活</a></li>
+                    <li><a href="/pages/album.html">アルバム</a></li>  
+                </ul>
+            </div>
+        </nav>
+    <div class="circle-bg"></div>
+    <!-- navmenu  sp end-->
+<!-- main -->
     <main>
-        <!-- schedule 園の生活 -->
         <section>
             <h1 id="pages_title"><pre>園の生活</pre></h1>
         </section>
@@ -10,10 +66,10 @@
             <div class="schedule" id=section1>
                 <!-- <h1>一日の保育の流れ</h1> -->
                 <div class="day_schedule sp">
-                    <img src="[tmplurl]/assets/images/schedule_sp.png">
+                    <img src="/assets/images/schedule_sp.png" alt="">
                 </div>
                 <div class="day_schedule pc">
-                    <img src="[tmplurl]/assets/images/schedule_pc.png">
+                    <img src="/assets/images/schedule_pc.png" alt="">
                 </div>
             </div>
         </section>
@@ -23,7 +79,7 @@
                 <h1><pre>          年間行事           </pre></h1>
                 <div class="schedule_wrap">
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly4.jpeg">
+                        <img src="/assets/images/calender/yearly4.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>入園式</li>
@@ -32,7 +88,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly5.jpeg">
+                        <img src="/assets/images/calender/yearly5.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>乳幼児健診（内科）</li>
@@ -42,7 +98,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly6.jpeg">
+                        <img src="/assets/images/calender/yearly6.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>歯科検診</li>
@@ -51,7 +107,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly7.jpeg">
+                        <img src="/assets/images/calender/yearly7.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>七夕</li>
@@ -60,7 +116,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                    <img src="[tmplurl]/assets/images/calender/yearly8.jpeg">
+                        <img src="/assets/images/calender/yearly8.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>水遊び</li>
@@ -68,7 +124,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly9.jpeg">
+                        <img src="/assets/images/calender/yearly9.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>敬老の日（お招き会）</li>
@@ -76,7 +132,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly10.jpeg">
+                        <img src="/assets/images/calender/yearly10.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>ハロウィーンパーティー</li>
@@ -85,7 +141,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly11.jpeg">
+                        <img src="/assets/images/calender/yearly11.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>内科検診</li>
@@ -93,7 +149,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly12.jpeg">
+                        <img src="/assets/images/calender/yearly12.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>クリスマスおゆうぎ会</li>
@@ -101,7 +157,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly1.jpeg">
+                        <img src="/assets/images/calender/yearly1.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>ムーチー作り（父母との共同作り）</li>
@@ -109,7 +165,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly2.jpeg">
+                        <img src="/assets/images/calender/yearly2.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>節分</li>
@@ -118,7 +174,7 @@
                         </div>
                     </div>
                     <div class="schedule_box">
-                        <img src="[tmplurl]/assets/images/calender/yearly3.jpeg">
+                        <img src="/assets/images/calender/yearly3.jpeg" alt="">
                         <div class="schedule_text">
                             <ul class="schedule_ul">
                                 <li>ひなまつり</li>
@@ -136,7 +192,7 @@
             <div class="schedule" id=section3>
                 <div class="schedule" id=section2>
                     <h1>登園許可届</h1>
-                    <p class="toen_text">保育所は集団で生活しているため、感染症の児童が登園してしまうと容易に園全体の子供達に感染してしまう恐れがあります。<br><br>
+                <p class="toen_text">保育所は集団で生活しているため、感染症の児童が登園してしまうと容易に園全体の子供達に感染してしまう恐れがあります。<br><br>
                     こうしたことが起きないように、<span class="yellow_line">感染症にかかった子供は医療機関を受診</span>し、伝染の恐れがない程度に回復したことを医師に証明してもらう必要があります。<br><br>
                     厚労省の感染症ガイドラインの登園届には、<span class="yellow_line">「医師が記入するもの」</span>と、<span class="yellow_line">「保護者が記入するもの」</span>の２種類があります。<br><br>
                     感染力が強く重症化しやすい感染症の場合は「医師が記入するもの」を使い、それ以外の感染症については「保護者が記入するもの」を使用します。<br><br>
@@ -174,10 +230,27 @@
                                     登園許可届（保護者記入用）をダウンロード</a>
                             </li>
                         </ul>
+
                     </div>
-                </div>
-            </div>
+            <div>
         </section>
     </main>
-
-<?php get_footer(); ?> 
+    <footer>
+        <div class="footer">
+            <!-- topup -->
+            <div id="page-top">
+                <a href="#"><img src="/assets/images/top_up.png" alt=""></a>
+            </div>
+            <!-- footer img -->
+            <img src="/assets/images/footer.png" alt="">
+            <div class=copylight>
+                <p class="copy">Copyright © クッピー乳児園. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/8-1-3/js/8-1-3.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

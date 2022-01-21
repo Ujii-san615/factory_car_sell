@@ -3,8 +3,10 @@
     //テーマサポート
     register_nav_menus();
     add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' ); 
     add_theme_support( 'automatic-feed-links' );
+    add_theme_support( 'custom-header' );
+    add_theme_support( "custom-background");
     if ( ! isset( $content_width ) ) {
         $content_width = 960;
     }
@@ -21,9 +23,9 @@
     add_filter( 'pre_get_document_title', 'wpbeg_title' );
 
     function wpbeg_script() {
+        wp_enqueue_style( 'title-style', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
         wp_enqueue_style( 'base-style', get_template_directory_uri() . '/assets/css/reset.css', array(), '1.0.0' );
         wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/css/common.css', array(), '1.0.0' );
-        wp_enqueue_style( 'title-style', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
         wp_enqueue_style( 'mplus1p', '//fonts.googleapis.com/earlyaccess/mplus1p.css', array() );
         wp_enqueue_style( 'Sacramento', '//fonts.googleapis.com/css?family=Sacramento&amp;amp;subset=latin-ext', array() );
         wp_enqueue_style( 'font-awesome', '/assets/css/fontawesome.css', array(), '4.7.0' );
@@ -91,7 +93,31 @@
         );
         }
         add_action( 'after_setup_theme', 'register_my_menus' );
+    
+    // 親テーマのテーマフォルダのパスを取得するショートコード
+    function gettmplurl($atts, $content = null) {
+    return get_template_directory_uri();
+    }
+    add_shortcode('tmplurl', 'gettmplurl');
+    
+    // 子テーマのテーマフォルダのパスを取得するショートコード
+    function getchildtmplurl($atts, $content = null) {
+    return get_stylesheet_directory_uri();
+    }
+    add_shortcode('childtmplurl', 'getchildtmplurl');
+    
+    // 子テーマのstyle.cssを読み込む 
+    add_action( 'wp_enqueue_scripts', 'my_enqueue_style_child' ); 
+    function my_enqueue_style_child() { 
+    wp_enqueue_style( 'child-style', get_stylesheet_uri() );
+    }
 
+    // メディアフォルダのパスを取得するショートコード
+    function getmediaurl($atts, $content = null) {
+    $wp_upload_dir = wp_upload_dir();
+    return $wp_upload_dir['baseurl'];
+    }
+    add_shortcode('mediaurl', 'getmediaurl');
     
     /*main js 読み込み */
     function twpp_enqueue_scripts() {
@@ -100,4 +126,101 @@
         get_template_directory_uri() . '/js/main.js' );
     }
     add_action( 'wp_enqueue_scripts', 'twpp_enqueue_scripts' );
+
+    // create custom post type(お知らせ)
+    function news_custom_post_type(){
+        $labels = array(
+        'name' => _x('お知らせ', 'post type general name'),
+        'singular_name' => _x('お知らせ', 'post type singular name'),
+        'add_new' => _x('新規追加', 'news'),
+        'add_new_item' => __('お知らせ'),
+        'edit_item' => __('編集'),
+        'new_item' => __('新規お知らせ'),
+        'view_item' => __('表示'),
+        'search_items' => __('項目検索'),
+        'not_found' => __('記事が見つかりません'),
+        'not_found_in_trash' => __('ゴミ箱に記事はありません'),
+        'parent_item_colon' => ''
+        );
+        
+        $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite'  => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 4,
+        'has_archive' => true,
+        'rewrite' => array( 'slug' => 'news'),
+        'supports' => array('title','editor','thumbnail')
+        );
+        register_post_type('news',$args);
+    
+        $args = array(
+        'label' => '月の便り',
+        'public' => true,
+        'show_ui' => true,
+        'show_in_nav_menus' => true,
+        'show_admin_column' => true,
+        'show_ui' => true,
+        'hierarchical' => true,
+        'query_var' => true
+        );
+        register_taxonomy('news_01','news',$args);
+
+        $args = array(
+        'label' => '献立表',
+        'public' => true,
+        'show_ui' => true,
+        'show_in_nav_menus' => true,
+        'show_admin_column' => true,
+        'show_ui' => true,
+        'hierarchical' => true,
+        'query_var' => true
+        );
+        register_taxonomy('news_02','news',$args);
+    }
+    add_action('init', 'news_custom_post_type');
+
+    
+    // // create custom post type 分類１
+    // $args = array(
+    //     'label' => 'カテゴリー１',
+    //     'public' => true,
+    //     'show_ui' => true,
+    //     'show_in_nav_menus' => true,
+    //     'show_admin_column' => true,
+    //     'hierarchical' => true,
+    //     'query_var' => true
+    // );
+    // register_taxonomy('news_01','news',$args);
+
+    // // create custom post type 分類2
+    // $args = array(
+    //     'label' => 'カテゴリー２',
+    //     'public' => true,
+    //     'show_ui' => true,
+    //     'show_in_nav_menus' => true,
+    //     'show_admin_column' => true,
+    //     'show_ui' => true,
+    //     'hierarchical' => false,
+    //     'query_var' => true
+    // );
+    // register_taxonomy('news_02','news',$args);
+
+    //記事読み込み用
+    function Include_my_php($params = array()) {
+        extract(shortcode_atts(array(
+            'file' => 'default'
+        ), $params));
+        ob_start();
+        include(get_theme_root() . '/' . get_template() . "/$file.php");
+        return ob_get_clean();
+    }
+    
+    add_shortcode('myphp', 'Include_my_php');
+    //ここまで
 ?>
