@@ -25,8 +25,8 @@
             centerPadding: '30px',
             dots:true,
             focusOnSelect:true,
-            prevArrow: '<img src="/assets/images/left.png" class="slick-prev slick-arrow">',//矢印部分PreviewのHTMLを変更
-            nextArrow: '<img src="/assets/images/right.png" class="slick-next slick-arrow">',//矢印部分NextのHTMLを変更
+            prevArrow: '<img src="<?php echo get_template_directory_uri();?>/images/left.png" class="slick-prev slick-arrow">',//矢印部分PreviewのHTMLを変更
+            nextArrow: '<img src="<?php echo get_template_directory_uri();?>/images/right.png" class="slick-next slick-arrow">',//矢印部分NextのHTMLを変更
         });
     </script>
 </body>

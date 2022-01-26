@@ -14,20 +14,7 @@
 		<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/8-1-3/js/8-1-3.js"></script>
-        
-        <script type="text/javascript">
-        $('.slider').slick({
-            autoplay:true,
-            autoplaySpeed:5000,
-            dots:true,
-            centerMode: true,
-            centerPadding: '30px',
-            dots:true,
-            focusOnSelect:true,
-            prevArrow: '<img src="/assets/images/left.png" class="slick-prev slick-arrow">',//矢印部分PreviewのHTMLを変更
-            nextArrow: '<img src="/assets/images/right.png" class="slick-next slick-arrow">',//矢印部分NextのHTMLを変更
-        });
-        </script>
+
 		<?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
@@ -48,11 +35,11 @@
         <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
             <ul>
                 <li><a href="/index.php">TOPページ</a></li>
-                    <li><a href="/info/index.php">お知らせ</a></li>
-                    <li><a href="/service/index.php">保育内容</a></li>
+                    <li><a href="/page-info.php">お知らせ</a></li>
+                    <li><a href="/page-service.php">保育内容</a></li>
                     <li><a href="/page-introduce.php">園の紹介</a></li>
-                    <li><a href="/schedule/index.php">園の生活</a></li>
-                    <li><a href="/album/index.php">アルバム</a></li>
+                    <li><a href="/page-schedule.php">園の生活</a></li>
+                    <li><a href="/page-album.php">アルバム</a></li>
             </ul>
             <?php wp_nav_menu( array('theme_location'  => 'headernav',)); ?>
         </div>

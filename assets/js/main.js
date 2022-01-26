@@ -54,22 +54,7 @@ $('.slider').slick({
     speed: 500,//スライドのスピード。初期値は300。
     slidesToShow: 3,//スライドを画面に3枚見せる
     slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
-    prevArrow: '<img src="/assets/images/right.png" class="slide-arrow prev-arrow">',//矢印部分PreviewのHTMLを変更
-    nextArrow: '<div class="slick-next"><i class="fas fa-angle-right"></i></div>',//矢印部分NextのHTMLを変更
     centerMode: true,//要素を中央ぞろえにする
     variableWidth: true,//幅の違う画像の高さを揃えて表示
     dots: true,//下部ドットナビゲーションの表示
-});
-
-
-$('.slider').slick({
-        autoplay:true,
-        autoplaySpeed:5000,
-        dots:true,
-        centerMode: true,
-        centerPadding: '30px',
-        dots:true,
-        focusOnSelect:true,
-        prevArrow: '<img src="/assets/images/left.png" class="slick-prev slick-arrow">',//矢印部分PreviewのHTMLを変更
-        nextArrow: '<img src="/assets/images/right.png" class="slick-next slick-arrow">',//矢印部分NextのHTMLを変更
 });

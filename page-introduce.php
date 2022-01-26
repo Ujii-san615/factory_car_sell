@@ -87,8 +87,9 @@
                         <td>多和田 鶴美</td>
                     </tr>
                 </table>
-
-                <p class="table_text">クラス別担当職員</p>
+                <h3 class="h3_left">
+                    <span class="table_subtitle">クラス別担当職員</span>
+                </h3>
                 <table class="syousai_table">
                     <tr>
                         <th>うさぎ組<br>(2歳児クラス)</th>
@@ -108,7 +109,9 @@
                     </tr>
                 </table>
                 <table class="syousai_table">
-                    <p class="table_text">サポート職員</p>
+                    <h3 class="h3_left">
+                        <span class="table_subtitle">サポート職員</span>
+                    </h3>
                     <tr>
                         <th>嘱託医</th>
                             <td>宮城小児科クリニック<br>宮城 仲健先生</td>
@@ -137,18 +140,5 @@
         <div>
     </section>
     </main>
-    <script type="text/javascript">
-        $('.slider').slick({
-            autoplay:true,
-            autoplaySpeed:5000,
-            dots:true,
-            centerMode: true,
-            centerPadding: '30px',
-            dots:true,
-            focusOnSelect:true,
-            prevArrow: '<<?php echo get_template_directory_uri();?>/iimages/left.png" class="slick-prev slick-arrow">',//矢印部分PreviewのHTMLを変更
-            nextArrow: '<?php echo get_template_directory_uri();?>/iimages/right.png" class="slick-next slick-arrow">',//矢印部分NextのHTMLを変更
-        });
-    </script>
 
 <?php get_footer(); ?> 
