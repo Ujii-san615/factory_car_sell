@@ -2,174 +2,119 @@
 
             <!-- slider -->
         <section>
-            <div class="slider_wrap">
+            <div class="slider_wrap pc">
+                <?php echo do_shortcode('[smartslider3 slider="4"]');?>
+            </div>
+
+            <div class="slider_wrap sp">
                 <?php echo do_shortcode('[smartslider3 slider="2"]');?>
             </div>
         </section>
-    <main>
-        <!-- content -->
+        <main>
         <section>
-            <div class="section" id=section1>
-                <h1>園からのお知らせ</h1>
-                <div class="section_small">
-                    <p class="section_small_text">
-                        2020/12/01　9月献立表を更新しました。
+            <div id="box1">
+                <div class="top_text">
+                    <p>
+                        毎日乗るクルマだから<br>
+                        手頃な価格で出会いたい！<br><br>
+                        そんなお客様にピッタリな車を見つける<br>
+                        お手伝いをさせていただきます。
                     </p>
-                    <p class="section_small_text">
-                        2020/12/01　9月献立表を更新しました。
+                </div>
+                <div class="second_text">
+                    <p>
+                        ▼現在販売中の中古車販売情報はこちらでチェック▼
                     </p>
-                    <p class="section_small_text">
-                        2020/12/01　9月献立表を更新しました。
-                    </p>
+                    <a href="https://www.o-cross.net/shop/004915/car/soldlist?SHOPID=004915&perPage=20&sortBy=registerNew">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/crossroad.png" alt="クロスロードで車を探す">
+                    </a>
                 </div>
             </div>
         </section>
+
         <section>
-            <div class="section2" id=section2>
-                <h1>クッピー乳児園の想い</h1>
-                <div class="omoi_box">
-                    <div class="omoi_back1">
-                        <div class="omoi_wrap">
-                            <span class="omoi_no">１</span>
-                            <p class="omoi_text">子どもの幸せを1番に願い、心身ともに豊かでたくましい子どもの育成を目指します。</p>
-                        </div>
-                    </div>
-                    <div class="omoi_back1">
-                        <div class="omoi_wrap">
-                            <span class="omoi_no">２</span>
-                            <p class="omoi_text">乳幼児の大切な時期を家庭的な雰囲気の中で一人一人を手厚く保育します。</p>
-                        </div>
-                    </div>
-                    <div class="omoi_back1">
-                        <div class="omoi_wrap">
-                            <span class="omoi_no">３</span>
-                            <p class="omoi_text">健やかな心身の発達を第一に目指し、養護と教育が一体となった保育をします。</p>
-                        </div>
+            <div id="box2">
+                <div class="section_title">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/title_about.png" alt="アバウト私たちについて">
+                </div>
+                <div class="section_text">
+                    <h1>沖縄で中古車を購入するなら<br>
+                        FACTORY CAR SELL
+                    </h1>
+                </div>
+                <div class="section_box">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/about_image.png" alt="当社の車両は格安での提供が可能">
+                    <div class="box_wrap">
+                        <p>
+                            本州から仕入れた軽自動車中古車両をメインに販売しています。<br>
+                            レンタアップ車両などの取り扱いもおこなっており、<br>
+                            お得な価格でご提供が可能です。<br><br>
+                            仕入れコストをギリギリまで落とすことで、<br>
+                            お客様のご満足いただける価格での<br>
+                            ご提供が可能となっております。<br>
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+
         <section>
-            <div class="section" id=section3>
-                <div class="section_line">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/line_flower.png" alt="">
-                </div>
-                <h1>小規模保育園とは？</h1>
-                <div class="section3_box">
-                    <div class="section3_square" id="square1">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon1.png" alt="">
-                        <p class="square">０〜３歳未満対象</p>
-                    </div>
-                    <div class="section3_square" id="square2">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon2.png" alt="">
-                        <p class="square">定員数19人以下の<br>
-                            小規模保育</p>
-                    </div>
-                    <div class="section3_square" id="square3">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon3.png" alt="">
-                        <p class="square">２歳児クラス卒園後、<br>
-                            認可保育園へ進級</p>
-                    </div>
-                </div>
-                
-                <p class="section3_text">クッピー乳児園では、通常の保育士の配置基準より<br>
-                    保育士を1名多く配置しており、<br>
-                    個々の発達に応じた丁寧な保育を行うことができます。</p>
-                
-                <div class="section_small">
-                    <h2>＜連携施設一覧＞</h2>
-                    <p class="section_small_text">
-                        ①どんぐりの里保育園　②赤道あおぞら保育園　<br>③ポケット保育園　④ぎのわんおひさま保育園
-                    </p>
+            <div id="box3">
+                <div class="section_title">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/title_news.png" alt="最新情報、販売車両">
                 </div>
 
+                <div class="news_text">
+                    <p>
+                        随時取り扱い車両や、販売実績を紹介しています。<br>
+                        気になる車両がございましたら<br>
+                        気軽に店舗までお問い合わせください。<br>
+                    </p>
                 </div>
             </div>
+            <div class="btn_tel">
+                    <a href="/factory_car_sell/news" class="btn_07">もっとみる<span></span></a>
+                </div>
 
         </section>
-        <div class="section_line">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/line_flower.png" alt="">
-        </div>
-        <section>
-            <div id="section4">
-                <h1>園について</h1>
-                <div class="section_table">
-                    <h2 class="h2_box">定員状況</h2>
-                    <p class="table_text">※現在空きはございません。（８月１日時点）</p>
-                    <table class="syousai_table">
-                        <tr>
-                            <th>年齢</th>
-                                <td>0歳児</td>
-                                <td>1歳児</td>
-                                <td>2歳児</td>
-                        </tr>
-                        <tr>
-                            <th>定員</th>
-                                <td>6名</td>
-                                <td>6名</td>
-                                <td>7名</td>
-                        </tr>
-                        <tr>
-                            <th>現員</th>
-                                <td>6名</td>
-                                <td>6名</td>
-                                <td>7名</td>
-                        </tr>
-                    </table>
 
+        <section>
+            <div id="box4">
+                <div class="section_title">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/title_buycar.png" alt="ご購入の流れ">
                 </div>
-                <div class="section_table">
-                    <h2 class="h2_box">保育時間</h2>
-                    <h3 class="h3_left"><span class="table_subtitle">通常保育</span></h3>
-                        <table class="syousai_table">
-                            <tr>
-                                <th>保育時間</th>
-                                    <td class="td_left">7：00～18：00</td>
-                            </tr>
-                            <tr>
-                                <th>延長保育</th>
-                                <td class="td_left">18：00～19：00（利用料 300円 / 1日 2500円 / 月額）</td>
-                            </tr>
-                        </table>
-                    <h3 class="h3_left"><span class="table_subtitle">土曜保育</span></h3>
-                        <table class="syousai_table">
-                            <tr>
-                                <th>保育時間</th>
-                                <td class="td_left">7：00～18：00</td>
-                            </tr>
-                        </table>
-                </div>
-                <div class="section_table">
-                    <h2 class="h2_box">概要</h2>
-                    <table class="syousai_table">
-                        <tr>
-                            <th>事業所名</th>
-                            <td class="td_left">クッピー乳児園</td>
-                        </tr>
-                        <tr>
-                            <th>電話番号</th>
-                            <td class="td_left">098-898-5657</td>
-                        </tr>
-                        <tr>
-                            <th>住所</th>
-                            <td class="td_left">〒901-2214　沖縄県宜野湾市我如古1-55-13-2F</td>
-                        </tr>
-                        <tr>
-                            <th>開園日</th>
-                            <td class="td_left">月曜〜土曜</td>
-                        </tr>
-                        
-                    </table>
-                </div>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/buycar_imag.png" alt="納車までの流れはこちら">
+            </div>
+            <div class="btn_tel">
+                <a href="#" class="btn_07">もっとみる<span></span></a>
             </div>
         </section>
+
+
+
         <section>
-            <div id="section5">
-                <h1>アクセスマップ</h1>
+            <div id="box5">
+                <div class="section_title">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/title_accece.png" alt="アクセス">
+                </div>
                 <div class="map pc">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28624.863267331!2d127.757005!3d26.258161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdf388e35d023df7!2z44Kv44OD44OU44O85Lmz5YWQ5ZyS!5e0!3m2!1sja!2sjp!4v1637250734732!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1722.2177808764484!2d127.6547705388931!3d26.178655727787092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5690645b3650b%3A0x397db47903e52596!2zRkFDVE9SWSBDQVIgUkVOVEFMIOaylue4hOOBrui8uOWFpei7iiDlpJbou4rjg6zjg7Pjgr_jgqvjg7w!5e0!3m2!1sja!2sjp!4v1648141231238!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
                 <div class="map sp">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28624.863267331!2d127.757005!3d26.258161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdf388e35d023df7!2z44Kv44OD44OU44O85Lmz5YWQ5ZyS!5e0!3m2!1sja!2sjp!4v1637250734732!5m2!1sja!2sjp" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1722.2177808764484!2d127.6547705388931!3d26.178655727787092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5690645b3650b%3A0x397db47903e52596!2zRkFDVE9SWSBDQVIgUkVOVEFMIOaylue4hOOBrui8uOWFpei7iiDlpJbou4rjg6zjg7Pjgr_jgqvjg7w!5e0!3m2!1sja!2sjp!4v1648141231238!5m2!1sja!2sjp" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
+            </div>
+        </section>
+        
+        <section>
+            <!-- mail.tel -->
+            <div class="contact_ico">
+                <div class="ico_wrap">
+                    <a href="/factory_car_sell/contact"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mail.png" alt="mail">
+</a>
+                    <a href="tel:0312345678"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tel.png" alt="tell"></a>
+                    <!-- topup -->
+                    <div id="page-top">
+                        <a href="#"></a>
+                    </div>
                 </div>
             </div>
         </section>

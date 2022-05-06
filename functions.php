@@ -26,13 +26,34 @@
         wp_enqueue_style( 'title-style', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
         wp_enqueue_style( 'base-style', get_template_directory_uri() . '/assets/css/reset.css', array(), '1.0.0' );
         wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/css/common.css', array(), '1.0.0' );
+        wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/assets/css/slick.css', array(), '1.0.0' );
+        wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css', array(), '1.0.0' );
         wp_enqueue_style( 'mplus1p', '//fonts.googleapis.com/earlyaccess/mplus1p.css', array() );
         wp_enqueue_style( 'Sacramento', '//fonts.googleapis.com/css?family=Sacramento&amp;amp;subset=latin-ext', array() );
-        wp_enqueue_style( 'font-awesome', '/assets/css/fontawesome.css', array(), '4.7.0' );
-        // wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css', array(), '4.5.0' );
-        // wp_enqueue_style( 'wpbeg', get_template_directory_uri() . '/css/wpbeg.css', array(), '1.0.0' );
+        wp_enqueue_style('fontawesome','https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+        wp_enqueue_script( 'jquery', '/assets/js/slick.min.js', "",'1.0.0' , false );
+        wp_enqueue_script( 'jquery', '/assets/js/main.js', "",'1.0.0' );
+
     }
-    add_action( 'wp_enqueue_scripts', 'wpbeg_script' );
+    add_action('wp_enqueue_scripts', 'wpbeg_script' );
+
+    function custom_print_scripts() {
+        if (!is_admin()) {
+            //デフォルトjquery削除
+            wp_deregister_script('jquery');
+    
+            //GoogleCDNから読み込む
+            wp_register_script( 'scroll-top', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '', true);
+            wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js' );
+        }
+        function add_script() {  // 装備の項目
+            deregister_script();
+            register_script();
+            wp_enqueue_script('scroll-top');
+            wp_enqueue_script('jquery');
+            }
+        add_action('wp_enqueue_scripts', 'add_script' ,'add_files');
+    }
 
     function wpbeg_widgets_init() {
         register_sidebar (

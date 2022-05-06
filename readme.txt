@@ -1,6 +1,6 @@
-=== kuppy_nursery ===
-Theme Name: kuppy_nursery
-Description: kuppy_nursery
+=== factory_car_sell ===
+Theme Name: factory_car_sell
+Description: factory_car_sell
 Version: 1.0.0
 Theme URI: 
 Author: chiaki
